@@ -1,0 +1,135 @@
+html {
+    box-sizing: border-box;
+}
+  
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(img/popart.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+textarea,
+input::placeholder, 
+textarea::placeholder,
+button {
+    color: black;
+    font-family: '#text-lower', Arial, Helvetica, sans-serif;
+}
+
+.logo {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+}
+.container {
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    height: 100vh;
+    position: relative;
+}
+
+.message-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    width: 100%;
+}
+
+.message-container textarea {
+    background: rgba(225, 225, 225, .3);
+    border: 5px solid  darkblue;
+    border-radius: 15px;
+    padding: 15px;
+    resize: none;
+    max-width: 470px;
+    width: 100%;
+}
+.message-container textarea:focus {
+    outline: none;
+}
+#text-lower{
+    display: none;
+    text-align: center;
+}
+.button-container {
+    margin-top: 20px;
+}
+.button-container p {
+    font-family: '.message-container', monospace;
+    margin-bottom: 10px;
+}
+.button-container button, #copy-btn {
+    background-color: #4696d8;
+    border: 5px solid darkblue;
+    border-radius: 15px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding: 12px;
+}
+#text-lower p {
+    color:rgb(40, 19, 158);
+    font-size: 5px;
+}
+.result-container {
+    align-items: center;
+    background: rgba(225, 225, 225, .3);
+    border: 5px solid darkblue;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    font-family: '.result-container', fantasy ;
+    justify-content: center;
+    min-height: 450px;
+    max-width: 400px;
+    padding: 25px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+.caveat-one {
+    color: black;
+    font-size: 30px;
+    margin-top: 20px;
+}
+.caveat-two {
+    color: black;
+    font-size: 15px;
+    margin-top: 20px;   
+}
+#copy-btn {
+    bottom: 10px;
+    display: none;
+    position: absolute;
+}
+@media all and (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+    .message-container {
+        margin-top: 50px;
+    }
+    .result-container {
+        margin: 10px 0;
+        margin-bottom: 40px;
+    }
+}
+@media all and (max-width: 400px) {
+    .message-container {
+        margin-top: 80px;
+        width: 100%;
+    }
+    footer {
+        align-items: baseline;
+        font-size: 11px;
+    }
+}
